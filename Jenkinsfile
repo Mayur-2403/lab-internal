@@ -4,7 +4,7 @@ pipeline {
     
   stage('Clone'){
     steps{
-      git url: 'https://github.com/Mayur-2403/lab3_jenkins.git',
+      git url: 'https://github.com/Mayur-2403/lab-internal.git',
         branch: 'main'
     }
   }
