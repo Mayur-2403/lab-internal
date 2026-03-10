@@ -12,7 +12,7 @@ pipeline {
             steps {
                 // This will list all files so you can see where script.py is
                 sh 'ls -R' 
-                sh 'script.py'
+                sh 'python3 script.py'
             }
         }
     }
