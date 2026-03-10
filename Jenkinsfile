@@ -1,16 +1,18 @@
-pipeline{
+pipeline {
   agent any
   stages{
-    stage('Clone'){
-      stage{
-        git url: 'https://github.com/Mayur-2403/lab-internal.git', branch: 'main'
-      }
-    }
-    stage('Run Script'){
-      stage{
-        sh 'chmod +x script.sh'
-        sh './script.sh'
-      }
+    
+  stage('Clone'){
+    steps{
+      git url: 'https://github.com/Mayur-2403/lab3_jenkins.git',
+        branch: 'main'
     }
   }
+  stage('Run Script'){
+    steps{
+      sh 'chmod +x script.sh'
+      sh './script.sh'
+    }
+  }
+}
 }
