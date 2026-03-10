@@ -1,16 +1,19 @@
 pipeline {
-  agent any
-  stages {
-    stage('Clone') {
-      steps {
-        git url: 'https://github.com/Mayur-2403/lab-internal.git',
-            branch: 'main'
-      }
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                // This clears the workspace and gets the code
+                cleanWs() 
+                checkout scm
+            }
+        }
+        stage('Debug & Run') {
+            steps {
+                // This will list all files so you can see where script.py is
+                sh 'ls -R' 
+                sh 'python3 script.py'
+            }
+        }
     }
-    stage('Run Python') {
-      steps {
-        sh 'python3 script.py'
-      }
-    }
-  }
 }
