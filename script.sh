@@ -1,7 +1,4 @@
 echo "hiii"
 echo "hello vvce"
 echo "Vidyavardhaka College of Engineering"
-echo "hiii"
-echo "hello vvce"
-echo "Vidyavardhaka College of Engineering"
-echo "Vidyavardhaka College of Engineering"
+
